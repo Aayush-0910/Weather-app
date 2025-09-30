@@ -1,8 +1,8 @@
-# React-Weather
+# Weatherly
 
-React-Weather is a user-friendly weather application built using React, React-Router, Redux, and powered by LocationIQ and RESTCountries APIs. This documentation will guide you through the app's features, technologies, setup, and usage.
+Weatherly is a user-friendly weather application built using React, React-Router, Redux, and powered by LocationIQ and RESTCountries APIs. This documentation will guide you through the app's features, technologies, setup, and usage.
 
-[![React-Weather](public/logo192.png)](https://react-weatherjs.netlify.app)
+[![Weatherly](public/logo192.png)](https://weatherlyjs.netlify.app)
 
 ## Features
 
@@ -40,13 +40,13 @@ React-Weather is a user-friendly weather application built using React, React-Ro
 Clone the project
 
 ```bash
-  git clone https://github.com/hsyntes/react-weather
+  git clone https://github.com/hsyntes/-weatherly
 ```
 
 Go to the project directory
 
 ```bash
-  cd react-weather
+  cd weatherly
 ```
 
 Install dependencies
@@ -66,6 +66,6 @@ Start the server
 - Location data provided by LocationIQ API.
 - Country information provided by RESTCountries API.
 
-Thank you for using the React-Weather app! Feel free to explore the source code, contribute, and enhance your weather experience using this intuitive React application.
+Thank you for using the Weatherly app! Feel free to explore the source code, contribute, and enhance your weather experience using this intuitive React application.
 
 

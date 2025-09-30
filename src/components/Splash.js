@@ -43,7 +43,7 @@ const Splash = () => {
         <Toast show={toast} animation={true}>
           <Toast.Header closeButton={false}>
             <img src={logo} width={24} alt="App logo" />
-            <h4 className="ms-2">React-Weather</h4>
+            <h4 className="ms-2">Weatherly</h4>
           </Toast.Header>
           <Toast.Body className="d-flex flex-column">
             <Card.Text className="mb-3">

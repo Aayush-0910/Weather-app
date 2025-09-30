@@ -8,6 +8,8 @@ import Spinner from "./Spinner";
 import { useDispatch } from "react-redux";
 import { setTheme } from "../store/theme/theme-slice";
 
+import FiveDayForecast from "./FiveDayForecast";
+
 const Root = ({ daily, units, current_weather, hourly, searched }) => {
   const navigation = useNavigation();
   const dispatch = useDispatch();
@@ -59,6 +61,7 @@ const Root = ({ daily, units, current_weather, hourly, searched }) => {
                   },
                 }}
               />
+              <FiveDayForecast daily={daily} />
             </Container>
           )}
         </main>

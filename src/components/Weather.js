@@ -38,7 +38,7 @@ const CustomTooltip = ({ active, payload, unit }) => {
   return null;
 };
 
-const Weather = ({ weather, units, date, hourlyWeathers }) => {
+const Weather = ({ weather, units, date, hourlyWeathers, timezone }) => {
   const animationState = useSelector((state) => state.animation);
   const { floating } = animationState;
 
@@ -49,10 +49,22 @@ const Weather = ({ weather, units, date, hourlyWeathers }) => {
 
   const { codes, hours, temperatures } = hourlyWeathers;
 
+  // ✅ Convert API hours into local time of searched location
   const data = hours.map((hour, index) => {
+    const utcDate = new Date(hour); // ISO string from API
+    // Convert into searched location timezone if provided
+    const localHour = timezone
+      ? utcDate.toLocaleTimeString("en-US", {
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+          timeZone: timezone, // 👈 Use searched city timezone
+        })
+      : utcDate.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+
     return {
       code: codes[index],
-      hour: hour.split("T").at(1),
+      hour: localHour,
       temperature: temperatures[index],
     };
   });
